@@ -141,3 +141,50 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 ```
 git push --set-upstream origin git-cloning
 ```
+
+Expected output:
+
+```
+namanattri@Namans-MacBook-Pro web-dev-zero-to-xp % git push --set-upstream origin git-cloning
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.26 KiB | 1.26 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'git-cloning' on GitHub by visiting:
+remote:      https://github.com/namanattri/web-dev-zero-to-xp/pull/new/git-cloning
+remote: 
+To https://github.com/namanattri/web-dev-zero-to-xp.git
+ * [new branch]      git-cloning -> git-cloning
+branch 'git-cloning' set up to track 'origin/git-cloning'.
+```
+
+#### If remote tracking branch exists them simple push `git push`
+
+```
+# stage the changes
+git add .
+# commit the changes
+git commit -m "instructions for pushing new branch"
+
+# push the changes to branch being tracked
+git push
+```
+
+expected output
+
+```
+namanattri@Namans-MacBook-Pro web-dev-zero-to-xp % git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.28 KiB | 1.28 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/namanattri/web-dev-zero-to-xp.git
+   883b9b1..46671e7  git-cloning -> git-cloning
+```
