@@ -120,3 +120,24 @@ git checkout git-commands
 git checkout -b git-commands 
 fatal: a branch named 'git-commands' already exists
 ```
+
+#### `git push` 
+
+If we try to push a new branch
+
+```
+namanattri@Namans-MacBook-Pro web-dev-zero-to-xp % git push
+fatal: The current branch git-cloning has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin git-cloning
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+#### Create upstream branch with tracking `git push --set-upstream origin git-cloning`
+
+```
+git push --set-upstream origin git-cloning
+```
