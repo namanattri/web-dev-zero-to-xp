@@ -17,6 +17,19 @@
 - Branches
 - Repository
 
+## Git Installation
+
+- Open Terminal (Bottom left, Icon, search terminal)
+- Open https://git-scm.com/install/linux
+- Run `apt-get install git`
+- Run `add-apt-repository ppa:git-core/ppa`
+- Run `apt update; apt install git`
+
+## Git Fork & Clone
+
+- Signup on Github
+- Clone the repo: `https://github.com/namanattri/web-dev-zero-to-xp`
+
 ## Git commands
 
 ```
