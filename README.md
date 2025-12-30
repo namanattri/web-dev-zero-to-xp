@@ -5,3 +5,4 @@ Modern web development course, interactive & AI powered
 # Week 1
 
 - [Day 1: Developer Setup: Ubuntu VM + Git + Docker + GitHub](notes/week-1/day-1.md)
+- [Day 2: WSL Installation & Linux Cheatsheet](notes/week-1/day-2.md)
