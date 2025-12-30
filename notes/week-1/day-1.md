@@ -33,18 +33,26 @@
 ## Git commands
 
 ```
+git init
 git clone
 git status
 git pull
 git fetch
 git checkout
 git add
+git reset
 git commit
 git push
 git merge
 ```
 
 ### Git commands examples:
+
+#### `git init` initialise a git repo
+
+```
+git init
+```
 
 #### `git status` shows the status of the current repo
 
@@ -84,6 +92,12 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   README.md
         new file:   notes/week-1/day-1.md
+```
+
+#### `git reset` unstage all changes
+
+```
+git reset
 ```
 
 #### `git commit` commits the staged changes
@@ -187,4 +201,17 @@ Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/namanattri/web-dev-zero-to-xp.git
    883b9b1..46671e7  git-cloning -> git-cloning
+```
+
+#### Git global configuration
+
+```
+git config --global user.name "Chander Sagar"
+git config --global user.email "csasagar1@gmail.com"
+```
+
+#### Ignoring some files
+
+```
+.gitignore
 ```
