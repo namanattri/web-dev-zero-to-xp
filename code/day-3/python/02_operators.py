@@ -64,6 +64,12 @@ count //= 3  # Same as: count = count // 3
 print(f"After count //= 3: {count}")
 print()
 
+count %= 2  # Same as: count = count % 2
+print(f"After count %= 2: {count}")
+
+count **= 2  # Same as: count = count ** 2
+print(f"After count **= 2: {count}")
+
 # PRACTICAL EXAMPLES
 print("=== PRACTICAL EXAMPLES ===")
 
