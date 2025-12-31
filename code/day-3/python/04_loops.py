@@ -28,10 +28,10 @@ print()
 # WHILE LOOP
 # Repeats while a condition is true
 print("=== WHILE LOOP ===")
-count = 1
-while count <= 5:
+count = 1 # initialize the counter
+while count <= 5: # condition to repeat the loop
     print(f"Count: {count}")
-    count += 1  # Important: update the counter!
+    count += 1  # Important: update the counter! # increment the counter
 print()
 
 # BREAK STATEMENT
@@ -101,6 +101,14 @@ number = 5
 factorial = 1
 for i in range(1, number + 1):
     factorial *= i
+print(f"Factorial of {number}: {factorial}")
+print()
+
+number = 5
+factorial = 1
+while number > 0:
+    factorial *= number
+    number -= 1
 print(f"Factorial of {number}: {factorial}")
 print()
 
