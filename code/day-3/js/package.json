@@ -1,0 +1,21 @@
+{
+  "name": "typescript-crash-course",
+  "version": "1.0.0",
+  "description": "TypeScript crash course for beginners",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "run": "ts-node"
+  },
+  "keywords": ["typescript", "tutorial", "learning"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  }
+}
+
