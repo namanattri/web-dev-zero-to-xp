@@ -144,6 +144,106 @@ upper_words = [word.upper() for word in words]
 print(f"Uppercase: {upper_words}")
 print()
 
+# MULTI-DIMENSIONAL ARRAYS (NESTED LISTS)
+print("=== MULTI-DIMENSIONAL ARRAYS ===")
+
+# 2D List (Matrix)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(f"2D Matrix:\n{matrix[0]}\n{matrix[1]}\n{matrix[2]}")
+print()
+
+# Accessing elements in 2D list
+print(f"Element at row 0, col 0: {matrix[0][0]}")  # 1
+print(f"Element at row 1, col 2: {matrix[1][2]}")  # 6
+print(f"Element at row 2, col 1: {matrix[2][1]}")  # 8
+print()
+
+# Modifying 2D list elements
+matrix[0][0] = 99
+print(f"After changing [0][0] to 99: {matrix[0]}")
+print()
+
+# Looping through 2D list
+print("Looping through 2D list:")
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()  # New line after each row
+print()
+
+# Looping with indices
+print("Looping with row and column indices:")
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        print(f"[{i}][{j}] = {matrix[i][j]}", end="  ")
+    print()
+print()
+
+# 3D List (Cube)
+cube = [
+    [[1, 2], [3, 4]],
+    [[5, 6], [7, 8]]
+]
+print(f"3D Cube: {cube}")
+print(f"Element at [0][1][0]: {cube[0][1][0]}")  # 3
+print(f"Element at [1][0][1]: {cube[1][0][1]}")  # 6
+print()
+
+# Creating 2D list with list comprehension
+rows, cols = 3, 4
+matrix_zeros = [[0 for j in range(cols)] for i in range(rows)]
+print(f"3x4 matrix of zeros:")
+for row in matrix_zeros:
+    print(row)
+print()
+
+# Creating identity matrix
+size = 4
+identity = [[1 if i == j else 0 for j in range(size)] for i in range(size)]
+print(f"4x4 Identity matrix:")
+for row in identity:
+    print(row)
+print()
+
+# Practical 2D list examples
+print("Example: Student grades table")
+students = [
+    ["Alice", 85, 90, 92],
+    ["Bob", 78, 82, 88],
+    ["Charlie", 95, 93, 97]
+]
+
+print("Name\t\tTest1\tTest2\tTest3\tAverage")
+print("-" * 50)
+for student in students:
+    name = student[0]
+    grades = student[1:]
+    average = sum(grades) / len(grades)
+    print(f"{name:<12}\t{grades[0]}\t{grades[1]}\t{grades[2]}\t{average:.1f}")
+print()
+
+# Transposing a matrix
+print("Matrix transpose:")
+original = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(f"Original (2x3):")
+for row in original:
+    print(row)
+
+# Transpose using list comprehension
+transposed = [[original[j][i] for j in range(len(original))] 
+              for i in range(len(original[0]))]
+print(f"Transposed (3x2):")
+for row in transposed:
+    print(row)
+print()
+
 # PRACTICAL EXAMPLES
 print("=== PRACTICAL EXAMPLES ===")
 
