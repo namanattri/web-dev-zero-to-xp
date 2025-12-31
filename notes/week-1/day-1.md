@@ -156,6 +156,12 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 git push --set-upstream origin git-cloning
 ```
 
+```
+git push -u origin git-cloning
+```
+
+`git-cloning` is the branch name here, use your own branch name.
+
 Expected output:
 
 ```
