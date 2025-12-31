@@ -4,6 +4,8 @@ Python Crash Course - Lesson 9: Input and Output
 Learn to interact with users and handle data
 """
 
+import random
+
 # BASIC OUTPUT
 print("=== BASIC OUTPUT ===")
 print("Hello, World!")
@@ -45,35 +47,21 @@ print("Loading", end="...")  # Custom end (no newline)
 print(" Done!")
 print()
 
-# BASIC INPUT (COMMENTED OUT - FOR DEMONSTRATION)
-print("=== BASIC INPUT (DEMONSTRATION) ===")
-# When you run this interactively, uncomment these lines:
-# name = input("Enter your name: ")
-# print(f"Hello, {name}!")
-
-# For demonstration, we'll simulate input
-print("# Simulated: name = input('Enter your name: ')")
-print("# User enters: Alice")
-name = "Alice"  # Simulated input
+# BASIC INPUT
+print("=== BASIC INPUT ===")
+name = input("Enter your name: ")
 print(f"Hello, {name}!")
 print()
 
 # INPUT WITH TYPE CONVERSION
 print("=== INPUT WITH TYPE CONVERSION ===")
-# Simulated demonstration
-print("# age = input('Enter your age: ')")
-print("# User enters: 25")
-age_str = "25"  # Simulated input
-age = int(age_str)  # Convert string to integer
+age = int(input("Enter your age: "))  # Convert string to integer
 print(f"You will be {age + 1} next year")
 print()
 
 # MULTIPLE INPUTS
 print("=== MULTIPLE INPUTS ===")
-# Simulated demonstration
-print("# Enter three numbers separated by spaces:")
-print("# User enters: 10 20 30")
-numbers_str = "10 20 30"  # Simulated input
+numbers_str = input("Enter three numbers separated by spaces: ")
 numbers = [int(x) for x in numbers_str.split()]
 print(f"Sum: {sum(numbers)}")
 print(f"Average: {sum(numbers) / len(numbers)}")
@@ -82,19 +70,11 @@ print()
 # PRACTICAL EXAMPLES
 print("=== PRACTICAL EXAMPLES ===")
 
-# Example 1: Simple calculator (simulated)
+# Example 1: Simple calculator
 print("\n--- Simple Calculator ---")
-print("# num1 = input('Enter first number: ')")
-print("# User enters: 10")
-num1 = 10
-
-print("# num2 = input('Enter second number: ')")
-print("# User enters: 5")
-num2 = 5
-
-print("# operation = input('Enter operation (+, -, *, /): ')")
-print("# User enters: +")
-operation = "+"
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+operation = input("Enter operation (+, -, *, /): ")
 
 if operation == "+":
     result = num1 + num2
@@ -110,23 +90,19 @@ else:
 print(f"Result: {num1} {operation} {num2} = {result}")
 print()
 
-# Example 2: Temperature converter (simulated)
+# Example 2: Temperature converter
 print("\n--- Temperature Converter ---")
-print("# celsius = input('Enter temperature in Celsius: ')")
-print("# User enters: 25")
-celsius = 25
+celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = (celsius * 9/5) + 32
 print(f"{celsius}°C = {fahrenheit}°F")
 print()
 
-# Example 3: Shopping list (simulated)
+# Example 3: Shopping list
 print("\n--- Shopping List ---")
 shopping_list = []
-print("# Enter items (type 'done' to finish):")
-# Simulated items
-items = ["milk", "bread", "eggs", "done"]
-for item in items:
-    print(f"# User enters: {item}")
+print("Enter items (type 'done' to finish):")
+while True:
+    item = input("Item: ")
     if item.lower() == "done":
         break
     shopping_list.append(item)
@@ -136,11 +112,9 @@ for i, item in enumerate(shopping_list, 1):
     print(f"{i}. {item}")
 print()
 
-# Example 4: Grade calculator (simulated)
+# Example 4: Grade calculator
 print("\n--- Grade Calculator ---")
-print("# Enter scores separated by spaces:")
-print("# User enters: 85 90 78 92 88")
-scores_str = "85 90 78 92 88"
+scores_str = input("Enter scores separated by spaces: ")
 scores = [int(x) for x in scores_str.split()]
 
 average = sum(scores) / len(scores)
@@ -161,19 +135,17 @@ else:
 print(f"Grade: {grade}")
 print()
 
-# Example 5: Number guessing game (simulated)
+# Example 5: Number guessing game
 print("\n--- Number Guessing Game ---")
-secret_number = 42
+secret_number = random.randint(1, 100)
 attempts = 0
 max_attempts = 5
 
-print(f"Guess the number between 1 and 100!")
-# Simulated guesses
-guesses = [50, 40, 45, 42]
+print("Guess the number between 1 and 100!")
 
-for guess in guesses:
+while attempts < max_attempts:
+    guess = int(input(f"Attempt {attempts + 1}/{max_attempts}: Enter your guess: "))
     attempts += 1
-    print(f"# Attempt {attempts}: User enters: {guess}")
     
     if guess == secret_number:
         print(f"Congratulations! You found it in {attempts} attempts!")
@@ -186,9 +158,4 @@ for guess in guesses:
     if attempts >= max_attempts:
         print(f"Game over! The number was {secret_number}")
         break
-
-print("\n" + "="*50)
-print("NOTE: To run these examples interactively,")
-print("uncomment the input() statements and run the script!")
-print("="*50)
 
