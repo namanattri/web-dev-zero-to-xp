@@ -1,77 +1,199 @@
-# WSL Installation
+# Windows Users: Setting up WSL (Recommended)
 
-```
-wsl --install
-wsl --install -d Ubuntu
-```
+**WSL (Windows Subsystem for Linux)** provides a complete Linux environment on Windows. This is the **recommended setup for Windows developers** because:
 
-List distros
+- ✅ Better compatibility with development tools
+- ✅ Native Linux commands and utilities
+- ✅ Easier to follow Unix-based tutorials
+- ✅ Consistent with macOS/Linux development workflows
+- ✅ No dual-boot or virtual machine needed
+- ✅ Seamless integration with Windows
 
-```
-wsl.exe --list --online
-```
+## Step 1: Install WSL
 
-Setup default version to 2
+**Requirements:**
+- Windows 10 version 2004+ (Build 19041+) or Windows 11
+- Administrator access
 
-```
-wsl --set-default-version 2
-```
+**Install WSL (Recommended Method):**
 
-expected output:
+1. **Open PowerShell or Command Prompt as Administrator:**
+   - Press `Win + X`
+   - Select "Windows PowerShell (Admin)" or "Terminal (Admin)"
 
-```
-PS C:\windows\system32> wsl --set-default-version 2
-For information on key differences with WSL 2 please visit https://aka.ms/wsl2
-The operation completed successfully.
-```
+2. **Install WSL with Ubuntu:**
+   ```powershell
+   wsl --install
+   ```
 
-Check status
+   This single command will:
+   - Enable WSL feature
+   - Install WSL 2
+   - Install Ubuntu (default Linux distribution)
+   - Set up everything automatically
 
-```
-wsl --status
-```
+3. **Restart your computer** when prompted
 
-expected output:
+4. **Set up Ubuntu:**
+   - After restart, Ubuntu will launch automatically
+   - Create a UNIX username (can be different from Windows username)
+   - Create a password (you won't see it as you type - this is normal)
+   - Remember this password - you'll need it for `sudo` commands
 
-```
-Default Distribution: Ubuntu
-Default Version: 2
-WSL1 is not supported with your current machine configuration.
-Please enable the "Windows Subsystem for Linux" optional component to use WSL1.
-```
-
-## Connect to instance
-
-```
-wsl
-```
-
-expected output: prompt with the following text
-
-```
-PS C:\windows\system32> wsl
-To run a command as administrator (user "root"), use "sudo <command>".
-See "man sudo_root" for details.
-
-csasagar@Attri-PC:/mnt/c/windows/system32$
+**Verify WSL Installation:**
+```bash
+wsl --version
+wsl --list --verbose
 ```
 
-## Update & Upgrade Ubuntu + install dev tools
+## Step 2: Install a Different Linux Distribution (Optional)
 
+If you want a different distribution:
+
+```powershell
+# List available distributions
+wsl --list --online
+
+# Install a specific distribution
+wsl --install -d Debian
+wsl --install -d Ubuntu-22.04
 ```
+
+## Step 3: Set Up VS Code with WSL
+
+1. **Install VS Code on Windows** (if not already installed)
+   - Download from [code.visualstudio.com](https://code.visualstudio.com/)
+
+2. **Install WSL Extension:**
+   - Open VS Code
+   - Go to Extensions (Ctrl+Shift+X)
+   - Search for "WSL"
+   - Install "WSL" by Microsoft
+
+3. **Open Project in WSL:**
+   - Open VS Code
+   - Press `Ctrl+Shift+P`
+   - Type "WSL: Connect to WSL"
+   - Or click the green icon in bottom-left corner → "Connect to WSL"
+
+4. **Access Your Windows Files from WSL:**
+   ```bash
+   # Windows C: drive is mounted at /mnt/c
+   cd /mnt/c/Users/YourUsername/Projects
+   ```
+
+5. **Access WSL Files from Windows:**
+   - In Windows Explorer, type: `\\wsl$\Ubuntu\home\yourusername`
+   - Or: Open WSL terminal and type `explorer.exe .`
+
+## Step 4: Install Development Tools in WSL
+
+Once WSL is set up, open WSL terminal and install tools:
+
+**Update package manager:**
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 
+**Install essential build tools:**
+```bash
 sudo apt install -y \
   build-essential curl wget git unzip zip \
   ca-certificates gnupg lsb-release \
   jq ripgrep fzf tree htop
 ```
 
-## Paste in wsl
+Now you can follow the **Linux instructions** for installing Python, NVM, and other tools throughout this guide!
 
+## WSL Basic Commands
+
+```bash
+# Start WSL (from Windows PowerShell/CMD)
+wsl
+
+# Start specific distribution
+wsl -d Ubuntu
+
+# Shut down WSL
+wsl --shutdown
+
+# Check WSL status
+wsl --list --verbose
+
+# Set default distribution
+wsl --set-default Ubuntu
+
+# Run a Linux command from Windows
+wsl ls -la
+
+# Open current directory in Windows Explorer
+explorer.exe .
 ```
-Right
+
+## WSL Tips
+
+1. **File Performance:**
+   - Keep project files in Linux filesystem (`~/Projects`) for best performance
+   - Accessing Windows files from WSL (`/mnt/c/...`) is slower
+
+2. **VS Code:**
+   - Always use "Open Folder in WSL" for best experience
+   - Extensions install separately for WSL
+
+3. **Git Configuration:**
+   - Configure Git separately in WSL and Windows if using both
+
+4. **Terminal:**
+   - Use Windows Terminal for the best WSL experience
+   - Install from Microsoft Store (free)
+
+5. **Paste in WSL Terminal:**
+   - Right-click to paste
+   - Or use `Ctrl+Shift+V` in Windows Terminal
+
+## Troubleshooting WSL
+
+**WSL command not found:**
+```powershell
+# Enable WSL feature manually
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
+
+**Set WSL 2 as default:**
+```powershell
+wsl --set-default-version 2
+```
+
+**Check WSL status:**
+```bash
+wsl --status
+```
+
+Expected output:
+```
+Default Distribution: Ubuntu
+Default Version: 2
+```
+
+**WSL won't start:**
+- Ensure virtualization is enabled in BIOS
+- Check Windows version: `winver`
+- Update Windows to latest version
+
+**Reset Ubuntu (if corrupted):**
+```powershell
+wsl --unregister Ubuntu
+wsl --install -d Ubuntu
+```
+
+## Resources
+
+- **Official WSL Docs:** [docs.microsoft.com/windows/wsl](https://docs.microsoft.com/windows/wsl)
+- **WSL GitHub:** [github.com/microsoft/WSL](https://github.com/microsoft/WSL)
+- **VS Code WSL:** [code.visualstudio.com/docs/remote/wsl](https://code.visualstudio.com/docs/remote/wsl)
+
+---
 
 # Linux Cheatsheet
 

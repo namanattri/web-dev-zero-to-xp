@@ -5,6 +5,8 @@ Welcome to Day 3! Today you'll learn Python fundamentals - the core 20% that cov
 
 ## Prerequisites
 
+> **📝 Windows Users:** Before proceeding, it's highly recommended to set up WSL (Windows Subsystem for Linux). See the [Day 2 notes](day-2.md) for complete WSL setup instructions. Once WSL is set up, follow the Linux instructions throughout this guide.
+
 ### Check if Python is Installed
 
 Before starting, verify Python is installed on your system:
@@ -32,14 +34,23 @@ brew install python3
 ```
 
 **On Windows:**
+
+*If using WSL (Recommended):*
+```bash
+# Follow the WSL setup instructions above, then:
+sudo apt update
+sudo apt install python3 python3-pip -y
+```
+
+*If using native Windows (Not Recommended):*
 1. Download from [python.org](https://www.python.org/downloads/)
 2. Run the installer
 3. ✅ **IMPORTANT:** Check "Add Python to PATH" during installation
 
-**On Linux (Ubuntu/Debian):**
+**On Linux (Ubuntu/Debian) or WSL:**
 ```bash
 sudo apt update
-sudo apt install python3 python3-pip
+sudo apt install python3 python3-pip -y
 ```
 
 ### Verify Installation
@@ -101,17 +112,19 @@ The crash course is divided into 12 lessons, each in its own file:
 
 ### Method 4: Using System Terminal
 
-**On macOS/Linux:**
+**On macOS/Linux/WSL:**
 ```bash
-cd ~/Projects/ps/web-dev-zero-to-xp/code/day-3
+cd ~/Projects/ps/web-dev-zero-to-xp/code/day-3/python
 python3 01_variables_and_datatypes.py
 ```
 
-**On Windows:**
+**On Windows (Native - Not Recommended):**
 ```bash
-cd C:\Projects\ps\web-dev-zero-to-xp\code\day-3
+cd C:\Projects\ps\web-dev-zero-to-xp\code\day-3\python
 python 01_variables_and_datatypes.py
 ```
+
+**Note for Windows users:** If using WSL, use the macOS/Linux commands above.
 
 ## Learning Path
 
@@ -154,8 +167,9 @@ Or run them individually as you complete each lesson.
 ## Troubleshooting
 
 ### "python3: command not found"
-- **On Windows:** Use `python` instead of `python3`
-- **On Mac/Linux:** Python 3 might not be installed. Install using package manager.
+- **On WSL/Mac/Linux:** Python 3 might not be installed. Install using package manager.
+- **On Windows (Native):** Use `python` instead of `python3`
+- **Recommended:** Use WSL on Windows for better compatibility
 
 ### "No module named..."
 - Some examples use built-in modules only, no installation needed
@@ -237,46 +251,118 @@ This section provides the same comprehensive programming course but using **Type
 
 ## Prerequisites
 
+> **📝 Windows Users:** If you haven't already, set up WSL (Windows Subsystem for Linux). See the [Day 2 notes](day-2.md) for complete WSL setup instructions. Once WSL is set up, follow the macOS/Linux instructions throughout this guide.
+
 ### Check if Node.js is Installed
 
 Node.js includes npm (Node Package Manager) which we'll use to install TypeScript.
 
-**On macOS/Linux/Windows:**
+**On macOS/Linux/WSL:**
 ```bash
 node --version
 npm --version
 ```
 
-You should see version numbers. If not, follow the installation steps below.
+You should see version numbers. If not, follow the NVM installation steps below.
 
-### Installing Node.js and TypeScript
+### Installing Node.js via NVM (Recommended)
 
-**On macOS:**
+**NVM (Node Version Manager)** is the recommended way to install Node.js. It allows you to:
+- Install multiple Node.js versions
+- Switch between versions easily
+- Avoid permission issues with global packages
+- Keep your Node.js installation up-to-date
+
+#### Step 1: Install NVM
+
+**On macOS/Linux/WSL:**
+
 ```bash
-# Using Homebrew
-brew install node
+# Download and install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# Install TypeScript globally
-npm install -g typescript ts-node
+# OR using wget
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+After installation, restart your terminal or run:
+
+```bash
+# Add NVM to your current shell session
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+**On Windows (Native - Not Recommended):**
+
+*If using WSL (Recommended):* Follow the macOS/Linux/WSL instructions above
+
+*If using native Windows PowerShell:*
+1. Download **nvm-windows** from: [github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
+2. Download `nvm-setup.exe` from the latest release
+3. Run the installer
+4. Restart your terminal
+
+**Verify NVM installation:**
+```bash
+nvm --version
+```
+
+#### Step 2: Install Node.js using NVM
+
+**Install the latest LTS (Long Term Support) version:**
+
+```bash
+# Install latest LTS version
+nvm install --lts
+
+# OR install a specific version
+nvm install 20.11.0
+
+# Use the installed version
+nvm use --lts
 ```
 
 **On Windows:**
-1. Download from [nodejs.org](https://nodejs.org/)
-2. Run the installer (LTS version recommended)
-3. Verify installation: `node --version` and `npm --version`
-4. Install TypeScript:
-   ```bash
-   npm install -g typescript ts-node
-   ```
-
-**On Linux (Ubuntu/Debian):**
 ```bash
-# Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install latest LTS version
+nvm install lts
 
-# Install TypeScript globally
-sudo npm install -g typescript ts-node
+# Use the installed version
+nvm use lts
+```
+
+**Set default Node.js version:**
+```bash
+nvm alias default node  # Use latest version as default
+# OR
+nvm alias default 20    # Use Node 20.x as default
+```
+
+#### Step 3: Install TypeScript
+
+After Node.js is installed via NVM:
+
+```bash
+# Install TypeScript and ts-node globally
+npm install -g typescript ts-node
+
+# Verify installation
+tsc --version
+ts-node --version
+```
+
+#### Useful NVM Commands
+
+```bash
+nvm ls                    # List installed Node.js versions
+nvm ls-remote            # List available Node.js versions (macOS/Linux)
+nvm ls available         # List available Node.js versions (Windows)
+nvm install 18           # Install Node.js version 18.x
+nvm use 18               # Switch to Node.js version 18.x
+nvm current              # Show currently active version
+nvm uninstall 16         # Uninstall Node.js version 16.x
 ```
 
 ### Verify Installation
@@ -501,10 +587,13 @@ npm install
 2. Reload VS Code
 3. Check `tsconfig.json` is present
 
-### Permission Errors (Linux/Mac)
+### Permission Errors (Linux/Mac/WSL)
+If using NVM, you shouldn't need sudo. If you do:
 ```bash
 sudo npm install -g typescript ts-node
 ```
+
+**Better solution:** Reinstall Node.js via NVM (see installation section above) to avoid permission issues.
 
 ## Next Steps
 
