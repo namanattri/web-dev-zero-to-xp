@@ -50,18 +50,19 @@ pip3 --version
 
 ## Course Structure
 
-The crash course is divided into 10 lessons, each in its own file:
+The crash course is divided into 11 lessons, each in its own file:
 
 1. **01_variables_and_datatypes.py** - Variables, strings, numbers, booleans, type conversion
 2. **02_operators.py** - Arithmetic, comparison, logical, and assignment operators
 3. **03_control_flow.py** - if/elif/else statements, decision making
 4. **04_loops.py** - for loops, while loops, break, continue
-5. **05_lists.py** - Lists, list operations, slicing, comprehensions
+5. **05_lists.py** - Lists, list operations, slicing, comprehensions, multi-dimensional arrays
 6. **06_dictionaries.py** - Dictionaries, key-value pairs, nested structures
 7. **07_functions.py** - Defining functions, parameters, return values
 8. **08_strings.py** - String manipulation, formatting, methods
-9. **09_input_output.py** - User input, output formatting, basic I/O
+9. **09_input_output.py** - User input, output formatting, interactive programs
 10. **10_practice_exercises.py** - Hands-on practice problems
+11. **11_python_references.py** - Understanding references, mutable vs immutable, copying
 
 ## How to Run the Code
 
@@ -121,12 +122,13 @@ Follow this sequence for best learning:
 2. Move to **02_operators.py** - Learn to manipulate data
 3. Study **03_control_flow.py** - Master decision making
 4. Practice **04_loops.py** - Learn repetition and iteration
-5. Explore **05_lists.py** - Work with collections
+5. Explore **05_lists.py** - Work with collections and arrays
 6. Understand **06_dictionaries.py** - Key-value data structures
 7. Learn **07_functions.py** - Write reusable code
 8. Master **08_strings.py** - Text manipulation
-9. Try **09_input_output.py** - User interaction
+9. Try **09_input_output.py** - Interactive user programs
 10. Challenge yourself with **10_practice_exercises.py**
+11. Deep dive into **11_python_references.py** - Understand memory and references
 
 ### Learning Tips
 
@@ -184,7 +186,7 @@ python3
 
 After completing this crash course:
 
-1. ✅ Complete all 10 lessons
+1. ✅ Complete all 11 lessons
 2. ✅ Solve all practice exercises
 3. ✅ Build a small project using what you learned
 4. ✅ Review concepts you found challenging
@@ -195,11 +197,12 @@ After completing this crash course:
 - ✨ Operators and expressions
 - ✨ Control flow (if/else)
 - ✨ Loops (for/while)
-- ✨ Lists and list operations
+- ✨ Lists and list operations (including multi-dimensional arrays)
 - ✨ Dictionaries
 - ✨ Functions
 - ✨ String manipulation
 - ✨ Input/Output
+- ✨ Python references and memory management
 - ✨ Problem-solving with code
 
 ## Resources
