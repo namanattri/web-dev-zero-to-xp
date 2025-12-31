@@ -72,6 +72,9 @@ a, b, c = 1, 2, 3
 print("=== MULTIPLE ASSIGNMENT ===")
 print(f"a = {a}, b = {b}, c = {c}")
 
+d, e, f = 4, "hello", True
+print(f"d = {d}, e = {e}, f = {f}")
+
 # Assign the same value to multiple variables
 x = y = z = 0
 print(f"x = {x}, y = {y}, z = {z}")
