@@ -1,5 +1,5 @@
 """
-Python Crash Course - Lesson 11: Understanding Python References
+Python Crash Course - Lesson 10: Understanding Python References
 ==================================================================
 Learn how Python handles variables, references, and memory
 """

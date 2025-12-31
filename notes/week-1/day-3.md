@@ -61,8 +61,8 @@ The crash course is divided into 11 lessons, each in its own file:
 7. **07_functions.py** - Defining functions, parameters, return values
 8. **08_strings.py** - String manipulation, formatting, methods
 9. **09_input_output.py** - User input, output formatting, interactive programs
-10. **10_practice_exercises.py** - Hands-on practice problems
-11. **11_python_references.py** - Understanding references, mutable vs immutable, copying
+10. **10_python_references.py** - Understanding references, mutable vs immutable, copying
+11. **11_practice_exercises.py** - Hands-on practice problems
 
 ## How to Run the Code
 
@@ -127,8 +127,8 @@ Follow this sequence for best learning:
 7. Learn **07_functions.py** - Write reusable code
 8. Master **08_strings.py** - Text manipulation
 9. Try **09_input_output.py** - Interactive user programs
-10. Challenge yourself with **10_practice_exercises.py**
-11. Deep dive into **11_python_references.py** - Understand memory and references
+10. Deep dive into **10_python_references.py** - Understand memory and references
+11. Challenge yourself with **11_practice_exercises.py**
 
 ### Learning Tips
 
