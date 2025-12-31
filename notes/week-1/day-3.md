@@ -220,3 +220,329 @@ After completing this crash course:
 
 Start with lesson 1 and work your way through. Take your time, experiment, and most importantly - have fun coding! 🚀
 
+---
+
+# Day 3: JavaScript/TypeScript Crash Course
+
+## Overview
+This section provides the same comprehensive programming course but using **TypeScript** - a typed superset of JavaScript. TypeScript adds static typing to JavaScript, making it easier to catch errors during development while maintaining full JavaScript compatibility.
+
+## Why TypeScript?
+
+- ✅ **Type Safety** - Catch errors before runtime
+- ✅ **Better IDE Support** - Enhanced autocomplete and intellisense
+- ✅ **Modern JavaScript** - Use latest ES features
+- ✅ **Scales Better** - Ideal for larger projects
+- ✅ **Compiles to JavaScript** - Runs anywhere JavaScript runs
+
+## Prerequisites
+
+### Check if Node.js is Installed
+
+Node.js includes npm (Node Package Manager) which we'll use to install TypeScript.
+
+**On macOS/Linux/Windows:**
+```bash
+node --version
+npm --version
+```
+
+You should see version numbers. If not, follow the installation steps below.
+
+### Installing Node.js and TypeScript
+
+**On macOS:**
+```bash
+# Using Homebrew
+brew install node
+
+# Install TypeScript globally
+npm install -g typescript ts-node
+```
+
+**On Windows:**
+1. Download from [nodejs.org](https://nodejs.org/)
+2. Run the installer (LTS version recommended)
+3. Verify installation: `node --version` and `npm --version`
+4. Install TypeScript:
+   ```bash
+   npm install -g typescript ts-node
+   ```
+
+**On Linux (Ubuntu/Debian):**
+```bash
+# Install Node.js
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install TypeScript globally
+sudo npm install -g typescript ts-node
+```
+
+### Verify Installation
+```bash
+node --version        # Should show v18.x.x or higher
+npm --version         # Should show 9.x.x or higher
+tsc --version         # TypeScript compiler
+ts-node --version     # TypeScript execution environment
+```
+
+## What is TypeScript?
+
+TypeScript is JavaScript with **type annotations**:
+
+```typescript
+// JavaScript
+function add(a, b) {
+    return a + b;
+}
+
+// TypeScript
+function add(a: number, b: number): number {
+    return a + b;
+}
+```
+
+Key differences:
+- `.ts` files (TypeScript) vs `.js` files (JavaScript)
+- Type annotations (optional but recommended)
+- Compiles to JavaScript before running
+- All JavaScript code is valid TypeScript
+
+## Course Structure
+
+The crash course is divided into 12 lessons in TypeScript (`.ts` files):
+
+1. **01_variables_and_datatypes.ts** - Variables, types, type annotations, type inference
+2. **02_operators.ts** - Arithmetic, comparison, logical operators, nullish coalescing
+3. **03_control_flow.ts** - if/else, switch statements, truthy/falsy values
+4. **04_loops.ts** - for, while, do-while, for...of, for...in loops
+5. **05_arrays.ts** - Arrays, methods, map/filter/reduce, multi-dimensional arrays
+6. **06_sets.ts** - Sets and set operations
+7. **07_objects.ts** - Objects, Maps, interfaces, key-value pairs
+8. **08_functions.ts** - Functions, arrow functions, types, callbacks
+9. **09_strings.ts** - String manipulation, template literals, methods
+10. **10_input_output.ts** - Console I/O, readline, Node.js basics
+11. **11_references.ts** - References, mutability, shallow vs deep copy
+12. **12_practice_exercises.ts** - Hands-on practice problems
+
+## Project Setup
+
+### Initialize TypeScript Project
+
+1. **Navigate to the code folder:**
+   ```bash
+   cd code/day-3/js
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+This installs:
+- TypeScript compiler (`typescript`)
+- TypeScript execution (`ts-node`)
+- Node.js type definitions (`@types/node`)
+
+### Configuration Files
+
+**package.json** - Project configuration and dependencies
+**tsconfig.json** - TypeScript compiler options
+
+Both are already set up in the project!
+
+## How to Run TypeScript Files
+
+### Method 1: Using ts-node (Recommended for Learning)
+
+Run TypeScript files directly without compiling:
+
+```bash
+cd code/day-3/js
+
+# Run any TypeScript file
+ts-node 01_variables_and_datatypes.ts
+ts-node 02_operators.ts
+ts-node 03_control_flow.ts
+# ... etc
+```
+
+### Method 2: Compile then Run
+
+Compile TypeScript to JavaScript, then run:
+
+```bash
+# Compile a single file
+tsc 01_variables_and_datatypes.ts
+
+# Run the compiled JavaScript
+node 01_variables_and_datatypes.js
+```
+
+### Method 3: Compile All Files
+
+```bash
+# Compile all TypeScript files
+npm run build
+
+# Files will be in the dist/ folder
+node dist/01_variables_and_datatypes.js
+```
+
+### Method 4: Using VS Code
+
+1. **Open the TypeScript file** in VS Code
+2. **Open integrated terminal** (`` Ctrl+` ``)
+3. **Run:**
+   ```bash
+   ts-node 01_variables_and_datatypes.ts
+   ```
+
+Or install the **Code Runner** extension and click the ▶️ run button!
+
+## Learning Path
+
+### Recommended Order
+
+Follow this sequence for best learning:
+
+1. Start with **01_variables_and_datatypes.ts** - Understand types and annotations
+2. Move to **02_operators.ts** - Learn JavaScript operators
+3. Study **03_control_flow.ts** - Master decision making
+4. Practice **04_loops.ts** - Learn iteration patterns
+5. Explore **05_arrays.ts** - Work with array methods
+6. Learn **06_sets.ts** - Unique collections
+7. Understand **07_objects.ts** - Key-value structures and Maps
+8. Master **08_functions.ts** - Functions and arrow syntax
+9. Study **09_strings.ts** - Text manipulation
+10. Try **10_input_output.ts** - Console and Node.js I/O
+11. Deep dive into **11_references.ts** - Memory management
+12. Challenge yourself with **12_practice_exercises.ts**
+
+### Learning Tips
+
+- **Compare with Python** - Notice similarities and differences
+- **Run every example** - See how TypeScript catches errors
+- **Experiment with types** - Try removing type annotations
+- **Use VS Code** - Get full IntelliSense support
+- **Check errors** - TypeScript highlights mistakes before running
+
+## TypeScript vs JavaScript vs Python
+
+| Feature | Python | JavaScript | TypeScript |
+|---------|--------|------------|------------|
+| File Extension | `.py` | `.js` | `.ts` |
+| Typing | Dynamic | Dynamic | Static (optional) |
+| Semicolons | No | Optional | Optional |
+| Arrays | Lists | Arrays | Typed Arrays |
+| Dictionaries | dict | Object/Map | Object/Map |
+| Functions | def | function | function + types |
+| Classes | Yes | Yes | Yes + interfaces |
+
+## Common TypeScript Concepts
+
+### Type Annotations
+```typescript
+let name: string = "Alice";
+let age: number = 25;
+let isStudent: boolean = true;
+```
+
+### Interfaces
+```typescript
+interface Person {
+    name: string;
+    age: number;
+}
+
+const person: Person = { name: "Alice", age: 25 };
+```
+
+### Union Types
+```typescript
+let id: number | string;
+id = 123;      // OK
+id = "ABC123"; // OK
+```
+
+### Type Inference
+```typescript
+let x = 5;  // TypeScript infers x is number
+```
+
+## Assignments
+
+The same coding assignments work for both Python and TypeScript! Check:
+- `assignments/day-3/js/` folder
+
+These assignments are language-agnostic and help you practice core programming concepts.
+
+## Troubleshooting
+
+### "tsc: command not found"
+```bash
+npm install -g typescript
+```
+
+### "ts-node: command not found"
+```bash
+npm install -g ts-node
+```
+
+### Module not found errors
+```bash
+cd code/day-3/js
+npm install
+```
+
+### VS Code TypeScript Errors
+1. Install **TypeScript** extension
+2. Reload VS Code
+3. Check `tsconfig.json` is present
+
+### Permission Errors (Linux/Mac)
+```bash
+sudo npm install -g typescript ts-node
+```
+
+## Next Steps
+
+After completing this crash course:
+
+1. ✅ Complete all 12 TypeScript lessons
+2. ✅ Compare with Python equivalents
+3. ✅ Solve assignment problems in both languages
+4. ✅ Build a small project in TypeScript
+5. ✅ Explore advanced TypeScript features (generics, decorators)
+
+## Key Concepts Covered
+
+- ✨ Variables and type annotations
+- ✨ Operators and expressions
+- ✨ Control flow (if/else, switch)
+- ✨ Loops (for, while, for...of)
+- ✨ Arrays and array methods
+- ✨ Sets and Maps
+- ✨ Objects and interfaces
+- ✨ Functions and arrow functions
+- ✨ String manipulation
+- ✨ Input/Output with Node.js
+- ✨ References and memory management
+- ✨ Problem-solving with code
+
+## Resources
+
+- **Official TypeScript Docs:** [typescriptlang.org](https://www.typescriptlang.org/docs/)
+- **TypeScript Playground:** [typescriptlang.org/play](https://www.typescriptlang.org/play)
+- **MDN JavaScript:** [developer.mozilla.org](https://developer.mozilla.org/)
+- **Node.js Docs:** [nodejs.org/docs](https://nodejs.org/docs)
+
+## Remember
+
+> "TypeScript is JavaScript with superpowers!" 
+
+Compare both Python and TypeScript versions to understand programming concepts deeply. Each language has its strengths - Python for simplicity and readability, TypeScript for type safety and JavaScript ecosystem integration.
+
+Happy coding! 🚀
+
