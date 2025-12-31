@@ -1,6 +1,6 @@
-# Assignment 4: Loops (for and while)
+# Assignment 4: Loops (for, while, and do-while)
 
-Complete the following coding challenges to practice iteration with loops.
+Complete the following coding challenges to practice iteration with loops in JavaScript/TypeScript.
 
 ---
 
@@ -8,8 +8,8 @@ Complete the following coding challenges to practice iteration with loops.
 Print the multiplication table for a given number from 1 to 10.
 
 **Sample Input:**
-```
-number = 7
+```typescript
+const number: number = 7;
 ```
 
 **Sample Output:**

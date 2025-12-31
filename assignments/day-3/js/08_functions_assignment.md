@@ -1,6 +1,6 @@
 # Assignment 8: Functions
 
-Complete the following coding challenges to practice creating and using functions in Python.
+Complete the following coding challenges to practice creating and using functions in JavaScript/TypeScript.
 
 ---
 
@@ -101,11 +101,11 @@ Hello, Prof. Johnson!
 
 ---
 
-## Question 6: Arbitrary Arguments (*args)
-Create a function that calculates the average of any number of arguments.
+## Question 6: Rest Parameters (...args)
+Create a function that calculates the average of any number of arguments using rest parameters.
 
 **Sample Input:**
-```
+```typescript
 average(10, 20, 30)
 average(5, 10, 15, 20, 25)
 average(100)
@@ -115,7 +115,7 @@ average(100)
 ```
 Average of (10, 20, 30): 20.0
 Average of (5, 10, 15, 20, 25): 15.0
-Average of (100,): 100.0
+Average of (100): 100.0
 ```
 
 ---
@@ -348,39 +348,25 @@ Quotient: 3, Remainder: 2
 
 ---
 
-## Question 20: Function Documentation
-Create well-documented functions with docstrings and use help().
+## Question 20: Function Documentation with JSDoc
+Create well-documented functions using JSDoc comments.
 
 **Sample Input:**
-```
-def calculate_bmi(weight, height):
-    """
-    Calculate Body Mass Index.
-    
-    Args:
-        weight: Weight in kilograms
-        height: Height in meters
-    
-    Returns:
-        BMI value as float
-    """
-    return weight / (height ** 2)
-
-help(calculate_bmi)
+```typescript
+/**
+ * Calculate Body Mass Index
+ * @param weight - Weight in kilograms
+ * @param height - Height in meters
+ * @returns BMI value as number
+ */
+function calculateBMI(weight: number, height: number): number {
+    return weight / (height ** 2);
+}
 ```
 
 **Sample Output:**
 ```
-Help on function calculate_bmi:
-
-calculate_bmi(weight, height)
-    Calculate Body Mass Index.
-    
-    Args:
-        weight: Weight in kilograms
-        height: Height in meters
-    
-    Returns:
-        BMI value as float
+BMI for 70kg, 1.75m: 22.86
+// Hover over function in VS Code to see documentation
 ```
 

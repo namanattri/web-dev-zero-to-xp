@@ -1,6 +1,6 @@
 # Assignment 9: String Manipulation
 
-Complete the following coding challenges to practice working with strings in Python.
+Complete the following coding challenges to practice working with strings in JavaScript/TypeScript.
 
 ---
 
@@ -52,17 +52,17 @@ The Lord of the Rings
 ---
 
 ## Question 4: Remove Special Characters
-Remove all special characters from a string, keeping only letters, numbers, and spaces.
+Remove all special characters from a string, keeping only letters, numbers, and spaces using regex.
 
 **Sample Input:**
-```
-text = "Hello, World! #Python2024"
+```typescript
+const text: string = "Hello, World! #TypeScript2024";
 ```
 
 **Sample Output:**
 ```
-Original: Hello, World! #Python2024
-Cleaned: Hello World Python2024
+Original: Hello, World! #TypeScript2024
+Cleaned: Hello World TypeScript2024
 ```
 
 ---
@@ -282,11 +282,11 @@ Interleaved: a1b2c345
 ---
 
 ## Question 18: Extract Email Components
-Extract username and domain from email addresses.
+Extract username and domain from email addresses using string methods or regex.
 
 **Sample Input:**
-```
-email = "user.name@example.com"
+```typescript
+const email: string = "user.name@example.com";
 ```
 
 **Sample Output:**

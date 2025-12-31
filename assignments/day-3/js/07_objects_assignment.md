@@ -1,24 +1,25 @@
-# Assignment 7: Dictionaries
+# Assignment 7: Objects and Maps
 
-Complete the following coding challenges to practice working with dictionaries and key-value pairs.
+Complete the following coding challenges to practice working with objects, Maps, and key-value pairs in JavaScript/TypeScript.
 
 ---
 
 ## Question 1: Student Grade Book
-Create a dictionary to store student names and their grades. Add, update, and delete entries.
+Create a Map to store student names and their grades. Add, update, and delete entries.
 
 **Sample Input:**
-```
-Add: ("Alice", 85), ("Bob", 92), ("Charlie", 78)
-Update: ("Alice", 90)
-Delete: "Bob"
+```typescript
+const grades: Map<string, number> = new Map();
+grades.set("Alice", 85);
+grades.set("Bob", 92);
+grades.set("Charlie", 78);
 ```
 
 **Sample Output:**
 ```
-Initial: {'Alice': 85, 'Bob': 92, 'Charlie': 78}
-After update: {'Alice': 90, 'Bob': 92, 'Charlie': 78}
-After delete: {'Alice': 90, 'Charlie': 78}
+Initial: {Alice: 85, Bob: 92, Charlie: 78}
+After update: {Alice: 90, Bob: 92, Charlie: 78}
+After delete: {Alice: 90, Charlie: 78}
 ```
 
 ---
@@ -133,11 +134,11 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 ---
 
-## Question 8: Dictionary Comprehension
-Create a dictionary of numbers (1-10) and their squares using dictionary comprehension.
+## Question 8: Object Creation from Array
+Create an object/Map of numbers (1-10) and their squares using array methods.
 
 **Sample Output:**
-```
+```typescript
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
 ```
 

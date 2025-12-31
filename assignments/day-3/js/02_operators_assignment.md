@@ -1,6 +1,6 @@
 # Assignment 2: Operators
 
-Complete the following coding challenges to practice working with different types of operators in Python.
+Complete the following coding challenges to practice working with different types of operators in JavaScript/TypeScript.
 
 ---
 
@@ -19,7 +19,7 @@ b = 5
 17 - 5 = 12
 17 * 5 = 85
 17 / 5 = 3.4
-17 // 5 = 3
+Math.floor(17 / 5) = 3
 17 % 5 = 2
 17 ** 5 = 1419857
 ```
@@ -215,13 +215,13 @@ number = 15
 ---
 
 ## Question 13: Password Strength
-Check password strength based on length (at least 8 characters) and if it contains a number. Use logical operators.
+Check password strength based on length (at least 8 characters) and if it contains a number. Use logical operators and regex.
 
 **Sample Input:**
-```
-password = "secure123"
-has_number = True
-length = 9
+```typescript
+const password: string = "secure123";
+const hasNumber: boolean = /\d/.test(password);
+const length: number = password.length;
 ```
 
 **Sample Output:**

@@ -1,15 +1,15 @@
 # Assignment 6: Sets
 
-Complete the following coding challenges to practice working with sets and set operations.
+Complete the following coding challenges to practice working with sets and set operations in JavaScript/TypeScript.
 
 ---
 
 ## Question 1: Remove Duplicates
-Convert a list with duplicates into a list with unique elements using sets.
+Convert an array with duplicates into an array with unique elements using sets.
 
 **Sample Input:**
-```
-numbers = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
+```typescript
+const numbers: number[] = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7];
 ```
 
 **Sample Output:**

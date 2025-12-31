@@ -1,6 +1,6 @@
-# Assignment 3: Control Flow (if/elif/else)
+# Assignment 3: Control Flow (if/else if/else)
 
-Complete the following coding challenges to practice decision-making with control flow statements.
+Complete the following coding challenges to practice decision-making with control flow statements in JavaScript/TypeScript.
 
 ---
 
@@ -44,11 +44,11 @@ Grade: B
 Create a simple login system that checks username and password. Print appropriate messages for success or different failure reasons.
 
 **Sample Input:**
-```
-username = "admin"
-password = "12345"
-correct_user = "admin"
-correct_pass = "admin123"
+```typescript
+const username: string = "admin";
+const password: string = "12345";
+const correctUser: string = "admin";
+const correctPass: string = "admin123";
 ```
 
 **Sample Output:**
@@ -348,8 +348,9 @@ Per person: $29.50
 Use ternary operator to assign values based on conditions. Check if a student passed (score >= 60) and assign "Pass" or "Fail".
 
 **Sample Input:**
-```
-score = 72
+```typescript
+const score: number = 72;
+const result: string = score >= 60 ? "Pass" : "Fail";
 ```
 
 **Sample Output:**

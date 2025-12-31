@@ -1,11 +1,11 @@
 # Assignment 10: Input and Output
 
-Complete the following coding challenges to practice user input and formatted output in Python.
+Complete the following coding challenges to practice user input and formatted output in JavaScript/TypeScript using Node.js.
 
 ---
 
 ## Question 1: Interactive Calculator
-Create an interactive calculator that keeps running until the user types "quit".
+Create an interactive calculator using readline that keeps running until the user types "quit".
 
 **Sample Interaction:**
 ```
@@ -21,6 +21,8 @@ Result: 80
 Continue? (yes/no): no
 Thank you for using the calculator!
 ```
+
+**Note:** Use `readline` or `readline-sync` package for input.
 
 ---
 

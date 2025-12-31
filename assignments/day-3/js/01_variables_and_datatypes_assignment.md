@@ -1,6 +1,6 @@
 # Assignment 1: Variables and Data Types
 
-Complete the following coding challenges to practice working with variables and data types in Python.
+Complete the following coding challenges to practice working with variables and data types in JavaScript/TypeScript.
 
 ---
 
@@ -69,9 +69,9 @@ True is of type <class 'bool'>
 Ask the user for two numbers as strings. Convert them to integers, add them, and print the result.
 
 **Sample Input:**
-```
-15
-27
+```typescript
+const num1: string = "15";
+const num2: string = "27";
 ```
 
 **Sample Output:**
@@ -112,7 +112,7 @@ Full Name: John Michael Doe
 ---
 
 ## Question 10: Circle Calculations
-Create a variable for the radius of a circle (e.g., 5). Calculate and store the circumference and area in separate variables. Use π = 3.14159.
+Create a variable for the radius of a circle (e.g., 5). Calculate and store the circumference and area in separate variables. Use Math.PI.
 
 **Formulas:**
 - Circumference = 2 × π × radius
@@ -121,8 +121,8 @@ Create a variable for the radius of a circle (e.g., 5). Calculate and store the 
 **Sample Output:**
 ```
 Radius: 5
-Circumference: 31.4159
-Area: 78.53975
+Circumference: 31.41592653589793
+Area: 78.53981633974483
 ```
 
 ---
