@@ -259,7 +259,10 @@ print(f"Passing scores: {passing_scores}")
 
 # Example 3: Remove duplicates
 numbers = [1, 2, 2, 3, 4, 4, 5]
-unique = list(set(numbers))  # Convert to set and back to list
+unique = []
+for num in numbers:
+    if num not in unique:
+        unique.append(num)
 print(f"Unique numbers: {unique}")
 
 # Example 4: Combine two lists

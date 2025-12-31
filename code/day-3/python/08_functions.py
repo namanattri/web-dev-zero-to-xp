@@ -1,5 +1,5 @@
 """
-Python Crash Course - Lesson 7: Functions
+Python Crash Course - Lesson 8: Functions
 ==========================================
 Learn to create reusable blocks of code
 """

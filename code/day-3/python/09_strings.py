@@ -1,5 +1,5 @@
 """
-Python Crash Course - Lesson 8: String Manipulation
+Python Crash Course - Lesson 9: String Manipulation
 ====================================================
 Learn to work with text data effectively
 """

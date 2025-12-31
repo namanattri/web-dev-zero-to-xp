@@ -1,6 +1,6 @@
 """
-Python Crash Course - Lesson 9: Input and Output
-=================================================
+Python Crash Course - Lesson 10: Input and Output
+==================================================
 Learn to interact with users and handle data
 """
 

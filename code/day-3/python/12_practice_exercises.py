@@ -1,5 +1,5 @@
 """
-Python Crash Course - Lesson 11: Practice Exercises
+Python Crash Course - Lesson 12: Practice Exercises
 ====================================================
 Put your skills to the test with practical challenges
 """

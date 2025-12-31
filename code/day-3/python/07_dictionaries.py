@@ -1,5 +1,5 @@
 """
-Python Crash Course - Lesson 6: Dictionaries
+Python Crash Course - Lesson 7: Dictionaries
 =============================================
 Learn to work with key-value pairs
 """
