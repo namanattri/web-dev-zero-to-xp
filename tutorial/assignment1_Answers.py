@@ -53,6 +53,13 @@
 
 # print("Answer 7: Boolean Logic")
 
+# is_sunny = True
+# is_warm = True
+
+# is_perfectday = is_sunny and is_warm
+
+# print(f"Is perfect day: {is_perfectday}")
+
 # print("Answer 8: Multiple Assignment")
 
 # x,y,z = 10,20,30
@@ -67,3 +74,68 @@
 
 # print(f"{f_name}"+ " "f"{m_name}"+" "f"{l_name}")
 
+# print("Answer 10: Circle Calculations")
+
+# rad = 5
+# pi = 3.14159
+
+# print(f"Radius: {rad}\nCircumference: {2*pi*rad}\nArea: {pi*(rad**2)}")
+
+
+# print("Answer 11: Data Type Conversion Chain")
+
+# str1 = "42"
+
+# int1 = int(str1)
+
+# flt1 = float(int1)
+
+# str2 = str(flt1)
+
+# print(f"Original: {str1} {type(str1)}\nTo int: {int1 } {type(int1)}\nTo float: {flt1} {type(flt1)}\nBack to string: {str2} {type(str2)}")
+
+
+# print("Answer 12: Variable Reassignment")
+
+# x = 5
+# a = 0
+
+# print(f"Count: {a}")
+
+# a = a+x
+
+# print(f"Count: {a}")
+
+# a = a+x
+
+# print(f"Count: {a}")
+
+# a = a+x
+
+# print(f"Count: {a}")
+
+
+
+# print("Answer 13: String String Methods")
+
+# str = "Hello World Python"
+
+# print(f"Original: {str}\nUppercase: {str.upper()}\nLowercase: {str.lower()}\nTitle case: {str.title()}")
+# print(str.capitalize())
+
+# print("Answer 14: String Numeric Operations with Types")
+
+# a = 10
+# b = 3.5
+
+# c = a + b
+
+# print(f"Result type: {type(c)}")
+
+# print("Answer 15: Price Calculator")
+
+# i_price = 19.99
+# qty = 3
+# t_val = i_price * qty
+
+# print(f"Toal value: {round(i_price * qty,2)}")
