@@ -26,12 +26,12 @@ age = 8
 if age <= 3:
     print(f"Ticket price for age  {age}: Free")
 
-if age > 3 and age <= 12:
+elif age > 3 and age <= 12:
     print(f"Ticket price for age  {age}: $10")
 
-if age >= 13 and age <= 64:
+elif age >= 13 and age <= 64:
     print(f"Ticket price for age  {age}: $20")
 
-if age >= 65:
+elif age >= 65:
     print(f"Ticket price for age  {age}: $15")
 
