@@ -17,9 +17,25 @@
 # ```
 print("Answer 2: Sum of First N Numbers")
 
-n = 10
+"""For Loop"""
+# n = 10
+# total = 0
 
+# for i in range(1,n+1):
+#     total += i
+# print(f"Sum of first {n} numbers: {total}")
+
+"""while Loop"""
+n = 10
 total = 0
-for i in range(1,n+1):
-    total += i
+sum = 1
+
+while sum <= n:
+    total += sum
+    sum += 1   
 print(f"Sum of first 10 numbers: {total}")
+  
+     
+
+
+

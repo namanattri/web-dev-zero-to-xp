@@ -17,10 +17,22 @@
 
 print("Answer 5: Factorial Calculator")
 
+"""For Loop"""
+# n = 5
+# fact = 1
+
+# for i in range(1,n+1):
+#     fact *= i
+# print(f"Factorial of {n} = {fact}")
+
+"""while Loop"""
 n = 5
-
 fact = 1
-
-for i in range(1,n+1):
-    fact *= i
+row = 1
+while row <= n:
+    fact *= row
+    row += 1
 print(f"Factorial of {n} = {fact}")
+    
+
+

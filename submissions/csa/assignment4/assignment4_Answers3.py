@@ -22,8 +22,17 @@
 
 print("Answer 3: Countdown Timer")
 
+"""For Loop"""
+# start = 10
+
+# for i in range(10,-0,-1):
+#     print(i)
+# print("Blast off!")    
+
+"""while Loop"""
 start = 10
 
-for i in range(10,-0,-1):
-    print(i)
+while start > 0:
+    print(start)
+    start -= 1 
 print("Blast off!")    
