@@ -1,0 +1,31 @@
+# # Assignment 4: Loops (for and while)
+
+# Complete the following coding challenges to practice iteration with loops.
+
+# ## Question 21: Inverted Triangle Pattern
+# Print an inverted right-angled triangle using stars.
+
+# **Sample Input:**
+# ```
+# rows = 5
+# ```
+
+# **Sample Output:**
+# ```
+# *****
+# ****
+# ***
+# **
+# *
+# ```
+
+# ---
+
+print("Answer 21: Inverted Triangle Pattern")
+
+n = 5
+
+for i in range(5,0,-1):
+    for j in range(1,i+1):
+        print("*", end=" ")
+    print()
